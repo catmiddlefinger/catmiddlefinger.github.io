@@ -1,0 +1,70 @@
+/* apply to entire page */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  flex-direction: column; /* Arrange children in a column */
+  background-color: #020f23;
+  background-image: url(https://e621.net/packs/static/background-bbf4af533456131bea3c.png);
+  /*if you had a sneaking suspicion about the background you were right*/
+}
+
+/* headings */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+  color: lightgrey;
+  text-align: center;
+}
+
+/* links */
+a {
+  font-family: 'Open Sans', sans-serif;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* paragraphs and other text */
+p, ul, ol {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
+  color: lightgray;
+}
+
+ul{
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+/* Style for the image */
+.popup-image {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 5px solid transparent;
+}
+
+.popup-image:hover {
+  transform: scale(1.2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+div {
+  margin-top: -12px;
+  margin-bottom: -12px;
+  color: lightgray;
+  font-size: 48px;
+}
