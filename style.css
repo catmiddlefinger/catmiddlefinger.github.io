@@ -72,3 +72,18 @@ div {
   align-items: baseline;    /* Center vertically */
   flex-direction: row; /* Arrange children in a column */
 }
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.volume-control label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#volumeSlider {
+  width: 200px;
+}

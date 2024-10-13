@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Cat Middle Finger FM</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/cat.ico" />
-	<link rel="stylesheet" href="/style.css">
+  <meta content="The world famous cat middle finger radio." property="og:title" />
+	<meta content= "The best radio station ever created." property="og:description" />
+	<meta content="https://catmiddlefinger.github.io" property="og:url" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Middle Finger FM</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/cat.ico" />
 </head>
 <body>
     <h1>WELCOME TO CAT MIDDLE FINGER RADIO!!!</h1>
     <h3>we the best music</h3>
-    <audio controls>
-        <source src="https://catmiddlefinger.servemp3.com" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio> 
+
+  <!-- Audio player -->
+  <audio id="audioPlayer" controls>
+    <source src="https://catmiddlefinger.servemp3.com" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Volume control slider -->
+  <div class="volume-control">
+    <label for="volumeSlider">Volume:</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+  </div>
+
+  <script>
+    // Get elements
+    const audioPlayer = document.getElementById('audioPlayer');
+    const volumeSlider = document.getElementById('volumeSlider');
+
+    // Load the saved volume from localStorage (or set to 1 if no saved volume)
+    const savedVolume = localStorage.getItem('savedVolume') || 1;
+    audioPlayer.volume = savedVolume;
+    volumeSlider.value = savedVolume;
+
+    // Update the volume when the slider changes
+    volumeSlider.addEventListener('input', () => {
+      const volume = volumeSlider.value;
+      audioPlayer.volume = volume;
+
+      // Save the current volume in localStorage
+      localStorage.setItem('savedVolume', volume);
+    });
+  </script>
+
 </body>
+</html>
