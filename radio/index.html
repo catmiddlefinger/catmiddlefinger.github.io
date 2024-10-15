@@ -45,9 +45,6 @@
       // Save the current volume in localStorage
       localStorage.setItem('savedVolume', volume);
     });
-  </script>
-  <script>
-    const audioPlayer = document.getElementById('audioPlayer');
 
     if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
@@ -60,5 +57,6 @@
         });
     }
   </script>
+
 </body>
 </html>
