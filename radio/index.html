@@ -46,6 +46,29 @@
       localStorage.setItem('savedVolume', volume);
     });
   </script>
+  <script>
+    const audioPlayer = document.getElementById('audioPlayer');
 
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: 'Cat Middle Finger FM',
+            artist: 'Fire Ass Artist Name',
+            album: 'Fire Ass Album Name',
+            artwork: [
+                { src: 'path-to-your-image-192x192.png', sizes: '192x192', type: 'image/png' },
+                { src: 'path-to-your-image-512x512.png', sizes: '512x512', type: 'image/png' }
+            ]
+        });
+
+        // Optional: Handle media session actions like play, pause, etc.
+        navigator.mediaSession.setActionHandler('play', function() {
+            audioPlayer.play();
+        });
+
+        navigator.mediaSession.setActionHandler('pause', function() {
+            audioPlayer.pause();
+        });
+    }
+  </script>
 </body>
 </html>
