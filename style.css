@@ -9,7 +9,7 @@ body {
   align-items: center;    /* Center vertically */
   flex-direction: column; /* Arrange children in a column */
   background-color: #020f23;
-  background-image: url(https://e621.net/packs/static/background-bbf4af533456131bea3c.png);
+  background-image: url(e6hex.png);
   /*if you had a sneaking suspicion about the background you were right*/
 }
 
