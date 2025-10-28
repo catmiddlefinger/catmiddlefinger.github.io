@@ -49,6 +49,13 @@
       localStorage.setItem('savedVolume', volume);
     });
 
+    audioPlayer.onplay = function(){
+       if (audioPlayer.currentTime !== 0) {
+        audioPlayer.src = "https://catmiddlefinger.servemp3.com";
+        audioPlayer.play();
+       }
+    };
+
     if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: 'Cat Middle Finger FM',
