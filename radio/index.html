@@ -51,7 +51,7 @@
 
     audioPlayer.onplay = function(){
        if (audioPlayer.currentTime !== 0) {
-        audioPlayer.src = "https://catmiddlefinger.servemp3.com";
+        audioPlayer.src = `https://catmiddlefinger.servemp3.com?nocache=${Date.now()}`;
         audioPlayer.play();
        }
     };
